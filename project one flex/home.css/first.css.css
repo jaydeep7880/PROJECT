@@ -1,0 +1,1384 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+body *
+{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+.navbar 
+{
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+.logo 
+{
+    padding-left: 50px;
+}
+
+.navbar ul
+{
+    float: right;
+    margin-right: 200px;
+} 
+
+.navbar li 
+{
+    display: inline-block;
+    margin: 0 30px;
+    line-height: 100px;
+}
+
+.navbar a 
+{
+    color: white;
+    font-size: 20px;
+}
+
+.navbar .bar2
+{
+   color: white;
+   float: right;
+   margin-right: 50px;
+   cursor: pointer;
+   line-height: 100px;
+   position: relative;
+}
+
+.bar2:hover ul
+{
+    left: 0;
+}
+
+.fa-bars
+{
+    visibility: hidden;
+}
+
+.home,.about,.gallery,.products,.blog
+{
+    position: relative;
+}
+
+
+.homediv,.aboutdiv,.productsdiv,.blogdiv
+{
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 35px 0 15px 20px ;
+    width: 170px;
+    display: none;
+}
+
+.homediv p,.aboutdiv p,.productsdiv p,.blogdiv p,.pagesdiv p,h3
+{
+    color: black;
+    line-height: 25px;
+}
+
+.bar2:hover .pages i,.pagesdiv:hover p i 
+{
+    visibility: hidden;
+}
+
+.home:hover .homediv,.about:hover .aboutdiv,.products:hover .productsdiv,.blog:hover .blogdiv,.blog1:hover .blogside1
+{
+    display: block;
+}
+
+.homediv p:hover,.aboutdiv p:hover,.productsdiv p:hover,.blogdiv p:hover,.pagesdiv p:hover
+{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.gallery2
+{
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.gallery:hover .gallery2
+{
+    display: block;
+}
+
+.blogdiv
+{
+    width: 230px;
+}
+
+.blogside1
+{
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.blog1
+{
+    width: 200px;
+    position: relative;
+}
+
+
+.blogside1
+{
+    width: 280px;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    display: none;
+}
+
+.pagesdiv 
+{
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    gap: 20px;
+    display: flex;
+    visibility: hidden;
+}
+
+.pages:hover .pagesdiv
+{
+    visibility: visible;
+}
+
+.typo,.form,.short,.list 
+{
+    width: 20%;
+    padding-top: 30px;
+}
+
+
+.pagesdiv p i 
+{
+    color: #2f3640;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pagesdiv p:hover i
+{
+    color: green;
+}
+
+
+.background
+{
+    background: url(../images/SLIDE_02.jpg);
+    background-size: cover;
+    height: 735px;
+    width: 100%;
+}
+
+
+.details30
+{
+    text-align: center;
+    color: white; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.details30 p 
+{
+    font-size: 30px;
+}
+
+.details30 h1
+{
+    font-size: 50px;
+}
+
+.details30 .p1
+{
+    font-size: 18px;
+}
+
+.read,.read1
+{
+    height: 40px;
+    width: 200px;
+    background-color: red;
+    color: white;
+    line-height: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 6px;
+}
+
+.white,.white1
+{
+    height: 40px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    border-radius: 25px;
+    padding: 6px;
+
+}
+
+.read:hover .white,.read1:hover .white1
+{
+    left: 0%;
+    transition: .3s;
+    color: black;
+}
+
+.read1
+{
+    background-color: antiquewhite;
+    color: black;
+}
+
+
+
+.btn
+{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 20px;
+    
+}
+
+
+.wash
+{
+    padding: 150px 30px 0px 130px ;
+    position: relative;
+}
+
+.moden
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.washing
+{
+    width: 60%;
+}
+
+.book 
+{
+    width: 40%;
+}
+
+.book h1
+{
+    font-size: 35px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.book .nil
+{
+    line-height: 25px;
+    letter-spacing: 1px;
+    padding-bottom: 50px;
+}
+
+.book h2 
+{
+    line-height: 25px;
+    letter-spacing: 1px;
+    padding-bottom: 50px;
+}
+
+.book h2 span 
+{
+    color: red;
+}
+
+.read,.white
+{
+    text-align: center;
+}
+
+.book .white
+{
+    background-color: black;
+}
+
+.colo 
+{
+    color: red;
+}
+
+
+
+.book .white span
+{
+    color: white;  
+}
+
+.washing
+{
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.circle
+{
+    height: 170px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: -50px;
+    left: 40%;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle i 
+{
+    cursor: pointer;
+}
+
+
+.partition 
+{
+    padding: 10px 30px 0px 130px ;
+    
+}
+
+.part4
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.one 
+{
+    width: 25%;
+    padding-left: 50px;
+}
+
+.icon 
+{
+    color: red;
+    font-size: 90px;
+    
+}
+
+.icon i 
+{
+    transform: translate(0px,10px);
+}
+
+
+
+.one:hover i
+{
+   transform: translate(0px,0px);
+   transition: 1s;
+}
+
+.one h2 
+{
+    margin-bottom: 25px;
+}
+
+
+
+.dark
+{
+    height: 1100px;
+    background: url(../images/HD-wallpaper-n-o-oscuro-undulado.jpg);
+    background-size: cover;
+    padding: 50px 180px 50px 180px;
+    margin-top: 50px;
+}
+
+.we
+{
+    text-align: center;
+    color: white;
+}
+
+.we h1
+{
+    font-size: 60px;
+    padding: 20px 0 20px 0 ;
+}
+
+.we h2,.plan h3
+{
+    color: red;
+}
+
+.we p 
+{
+    padding-top: 10px;
+}
+
+.miner 
+{
+    margin-top: 30px;
+    position: relative;
+}
+
+.jadav 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+
+.miner:hover .jadav 
+{
+    display: block;
+}
+
+
+
+
+
+.mini1
+{
+    display: flex;
+}
+
+.piti1
+{
+    height: 630px;
+    width: 70%;
+    background: url(../images/serv_02.jpg);
+    background-size: cover;
+}
+
+.piti2
+{
+    width: 30%;
+    background-color: white;
+    color: black;
+    padding: 50px 10px 50px 30px;
+}
+
+.piti2 i 
+{
+    color: red;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.pad 
+{
+    padding-bottom: 30px;
+}
+
+
+.piti2 p i 
+{
+    color: green;
+
+}
+
+.white i
+{
+    padding-top: 0px;
+}
+
+.read i
+{
+    padding-top: 0px;
+}
+
+
+.oo1
+{
+    background: url(../images/serv_03.jpg);
+    background-size: cover;
+}
+
+
+
+.elitemain
+{
+    padding: 0 200px 0 200px ;
+}
+
+.plan
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 140px;
+    position: relative;
+    
+}
+
+.plan p 
+{
+    padding: 10px 0 10px 0 ;
+    line-height: 25px;
+}
+
+.plan h3 
+{
+    letter-spacing: 3px;
+}
+
+.boo 
+{
+    height: 170px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+
+.menual
+{
+    position: relative;
+}
+
+.section
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.car1,.car2,.car3,.car4
+{
+    width: 20%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: 60px;
+
+}
+
+.imager1 img 
+{
+    transition: .4s;
+}
+
+
+
+.imager1 img:hover 
+{
+    transform: scale(1.03);
+   
+}
+
+
+.section1
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.section2,.section3,.section4
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+    position: absolute;
+    top: 258px;
+    left: 0px;
+    width: 100%;
+    visibility: hidden;
+}
+
+
+.car2:hover .section2,.car3:hover .section3,.car4:hover .section4
+{
+    visibility: visible;
+}
+
+.car2:hover .section2 .min15
+{
+    background-color: darkgray;
+}
+
+
+.car3:hover .section3 .min15
+{
+    background-color: rgb(158, 225, 71);
+}
+
+.car4:hover .section4 .min15
+{
+    background-color: cadetblue;
+}
+
+
+.min15:hover 
+{
+    transform: scale(0.98);
+}
+
+.min15
+{
+    width: 24%;
+    height: 500px;
+    padding: 20px;
+    transition: .5s;
+    box-shadow: 0 0 4px;
+}
+ 
+.in15 
+{
+    height: 445px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.in15 h3 
+{
+    color: red;
+}
+
+.in15 span 
+{
+    font-size: 40px;
+}
+
+.in15 h1
+{
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+.in15 p
+{
+    padding-bottom: 25px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+
+.in15 .fa-check
+{
+    color: green;
+}
+
+.in15 .fa-xmark
+{
+    color: gray;
+}
+
+.in15 .fa-clock 
+{
+    color: red;
+}
+
+.vi 
+{
+    height: 50px;
+    width: 70%;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.z1
+{
+    background-color: red;
+    border-radius: 25px;
+    color: white;
+}
+
+.z2
+{
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 1s;
+}
+
+.vi:hover .z2
+{
+    left: 0%;
+}
+
+.jex 
+{
+    color: white;
+    background: url(../images/plan_BG.jpg);
+    background-size: cover;
+}
+.jex .z2 
+{
+    color: black;
+}
+
+.pilor
+{
+    height: 1100px;
+    width: 100%;
+    background-color: black;
+    padding: 0 159.4px 0 159.4px;
+    margin-top: 30px;
+}
+
+.befor,.befor1
+{
+    padding: 80px 0px 0 0 ;
+    font-size: 80px;
+    color: transparent;
+    color: gray;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.troly
+{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dry
+{
+    width: 40%;
+}
+
+.dry h2 
+{
+    color: red;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+
+.dry h1
+{
+    font-size: 50px;
+    color: white;
+}
+
+
+.filter img 
+{
+    object-fit: cover;
+}
+
+.filter 
+{
+    width: 60%;
+    position: relative;
+}
+
+.fil1
+{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: none;
+}
+
+.filter:hover .fil1
+{
+    display: block;
+}
+
+.befor1
+{
+    padding: 0;
+    text-align: right;
+    padding-bottom: 40px;
+}
+
+.top 
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.natural,.care,.aro
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 33.33%;
+    gap: 20px;
+}
+
+.ic 
+{
+    height: 80px;
+    width: 20%;
+    color: red;
+    font-size: 60px;
+    text-align: center;
+}
+
+.cle 
+{
+    color: white;
+    width: 70%;
+}
+
+.cle h2 
+{
+    color: white;
+    padding-bottom: 10px;
+}
+
+.red
+{
+    background-color: red;
+    height: 300px;
+    position: relative;
+}
+
+.aql
+{
+    height: 300px;
+    padding: 130px 159.4px 70px 159.6px;
+}
+
+.boo5
+{
+    height: 170px;
+    width: 300px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%,0%);
+}
+
+.dell 
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d1,.d3
+{
+    width:30%;
+    padding-top: 50px;
+}
+
+.d1 span 
+{
+    color: white;
+}
+
+.d2 
+{
+    width: 40%;
+    height: 166px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.dot 
+{
+    position: relative;
+}
+
+.demer
+{
+    position: absolute;
+    top: 0;
+    left: 150px;
+}
+
+.d2:hover img 
+{
+    transform: translate(0px,-10px);
+    transition: .5s;
+}
+
+.d3 .z1 
+{
+    background-color: black;
+    color: white;
+}
+
+.wheeler 
+{
+    padding: 70px 159.4px 170px 159.6px;
+}
+
+.wheeler01
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.whee 
+{
+    width: 30%;
+}
+
+.wheeimg 
+{
+    height: 300px;
+}
+
+.location 
+{
+    width: 40%;
+}
+
+.location h1
+{
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+.table 
+{
+    width: 30%;
+    height: 500px;
+    background: url(../images/HD-wallpaper-n-o-oscuro-undulado.jpg);
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.local 
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lo1,.lo2,.lo3,.lo4,.lo5
+{
+    display: flex;
+    width: 50%;
+}
+
+.lo1,.lo2,.lo3,.lo4,.lo5 p 
+{
+    padding-bottom: 50px;
+}
+
+.lz2 h4 
+{
+    color: red;
+}
+
+.lz1
+{
+    padding-right: 5px;
+    color: red;
+}
+
+.table h2
+{
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.table span
+{
+    color: red;
+}
+
+.table input
+{
+    padding: 20px;
+    border-radius: 35px;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.table form 
+{
+    padding: 20px 0px 20px 55px ;
+}
+
+form select
+{
+    padding: 20px;
+    width: 80%;
+    border-radius: 35px;
+}
+
+.attach
+{
+    height: 890px;
+    background: url(../images/testimonials_parallax.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.jil
+{
+    height: 890px;
+    background-color: rgba(0, 0, 0, 0.543);
+    padding: 180px 159.4px 0 159.6px ;
+}
+
+.att1
+{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+.att1 p 
+{
+    color: red;
+    letter-spacing: 2px;
+}
+
+
+.att2
+{
+    margin-top: 100px;
+    padding: 50px 130px 50px 130px ;
+    line-height: 30px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.att3i 
+{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.pol 
+{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.pol img 
+{
+    border-radius: 50%;
+}
+
+
+.att3i h3 
+{
+    padding-top: 20px;
+    color: red;
+}
+
+ .mola 
+ {
+    position: relative;
+ }
+
+ .att21
+ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    color: yellow;
+    display: none;
+ }
+
+ .mola:hover .att21 
+ {
+    display: block;
+ }
+
+ .gravy
+ {
+    background-color: #f2f2f2;
+    padding: 50px 159.4px 0px 159.6px;
+ }
+
+ .graver 
+ {
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .ig1 
+ {
+    height: 200px;
+    width: 16.66%;
+    padding: 50px;
+ }
+
+ .ig1 img 
+ {
+    filter: brightness(5);
+ }
+
+ .ig1 img:hover 
+ {
+    filter: brightness(0);
+    transition: .5s;
+ }
+
+ .file 
+ {
+    padding:  100px 159.4px 100px 159.6px;
+ }
+
+ .edit
+  {
+    text-align: center;
+  }
+
+  .edit span
+  {
+    color: red;
+    letter-spacing: 2px;
+  }
+
+  .edit h1
+  {
+    font-size: 40px;
+  }
+
+  .editp4
+  {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .edp1
+  {
+    width: 24%;
+    padding: 10px;
+    box-shadow: 0 0 5px;
+  }
+
+  .edp1:hover 
+  {
+    transform: scale(.98);
+    transition: .5s;
+  }
+
+  .tayar
+  {
+    padding: 10px;
+  }
+
+  .tayar1 
+  {
+    padding: 10px;
+  }
+
+  .tayar1 .fa-star
+  {
+    color: #ccb686;
+  }
+
+  .tayar1 h2 
+  {
+    padding: 8px 0 8px 0 ;
+  }
+
+  .tayar1 h2:hover 
+  {
+    color: red;
+    transform: scale(.99);
+  }
+
+  .tayar1 p 
+  {
+    line-height: 30px;
+  }
+
+ .jay1
+ {
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+ }
+
+button
+ {
+    padding: 15px;
+    border-radius: 35px;
+    width: 80%;
+    background-color: red;
+    color: white;
+    border: none;
+ }
+ 
+ .button2 
+ {
+    padding: 15px;
+    border-radius: 35px;
+    width: 80%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: -100%;
+    border: none;
+ }
+
+ .jay1:hover .button2 
+ {
+    left: 9%;
+ }
+
+ .lastb button
+ {
+    width: 25%;
+    margin: 50px 0 50px 0 ;
+    cursor: pointer;
+    font-size: 20px;
+ }
+
+ .lastb button:hover 
+ {
+    background-color: black;
+ }
+
+ .bim
+ {
+     background: url(../images/HD-wallpaper-n-o-oscuro-undulado.jpg);
+     background-size: 100% 100%;
+     height: 800px; 
+     padding: 0 159.4px 0px 159.6px;
+     position: relative;
+ }
+
+ .nahi
+ {
+    height: 10px;
+    width: 80%;
+    background-color: red;
+    border-radius: 25px;
+    position: absolute;
+    top: -5px;
+ }
+
+ .dil12
+ {
+    position: absolute;
+    top: 100px;
+ }
+
+ .flo1
+ {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 40px;
+}
+
+ .galu 
+ {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 20px 320px 0 320px ;
+    line-height: 30px;
+ }
+
+ .fp4
+ {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .t1 
+ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    color: white;
+    width: 25%;
+ }
+
+ .t1 i 
+ {
+    font-size: 60px;
+    padding-bottom: 30px;
+    color: red;
+ }
+
+ .t1 i:hover 
+ {
+    color: white;
+    cursor: pointer;
+ }
+
+ .t1 span 
+ {
+    color: red;
+ }
+
+ .laster 
+ {
+    width: 80%;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    padding: 25px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.199);
+ }
+
+ .laster span 
+ {
+    color: red;
+ }

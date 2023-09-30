@@ -1,0 +1,26 @@
+@media(max-width:1216px)
+{
+    .bars
+    {
+        visibility: visible;
+        float: right;
+    }
+ 
+    .nav li 
+    {
+        display: inline-block;
+    }
+
+
+}
+
+
+@media(max-width:500px)
+{
+    #bhuri{
+        visibility: visible;
+    }
+
+
+
+}

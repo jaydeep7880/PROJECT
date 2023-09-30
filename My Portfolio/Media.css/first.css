@@ -1,0 +1,46 @@
+@media(max-width:1200px)
+{
+    .part1 
+    {
+        width: 48%;
+    }
+
+    .sque1
+    {
+        width: 100%;
+    }
+
+
+
+}
+
+
+
+@media(max-width:700px)
+{
+    .yellow h1
+    {
+        font-size: 50px;
+    }
+
+    .bluver
+    {
+        margin-top: 50px;
+    }
+
+    .xix 
+    {
+        padding: 120px 20px;
+    }
+
+   
+
+}
+
+@media(max-width:500px)
+{
+    .part1
+    {
+        width: 98%;
+    }
+}

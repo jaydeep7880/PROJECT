@@ -1,0 +1,988 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.black
+{
+    background-color: black;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+}
+
+.black ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+.black li 
+{
+    display: inline;
+    float: right;
+}
+
+.black a 
+{
+    text-decoration: none;
+    color: white;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.black .nil 
+{
+    border-right: 2px solid white;
+    padding-right: 20px;
+}
+
+.black .nil2
+{
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+
+/* *********************navbar start*************************************** */
+
+.main
+{
+    /* border: 2px solid blue; */
+    padding: 0 80px 0 80px;
+}
+
+.section
+{
+    /* border: 2px solid red; */
+    padding: 30px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 8fr .5fr .5fr;
+}
+
+
+.section li 
+{
+    float: left;
+    padding-right: 80px;
+}
+
+.section ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.section a 
+{
+    text-decoration: none;
+    color: black;
+}
+
+.section li 
+{
+    list-style: none;
+
+}
+
+.section li:hover
+{
+  
+  padding-left: 5px;
+  transition: 0.5s;  
+  list-style-type: disc;
+}
+
+
+
+.lux
+{
+    font-size: 20px;
+
+}
+
+.section .lux:hover
+{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+
+.bar
+{
+    /* float: right; */
+}
+
+
+.home,.pages,.vehicle,.blog,.shop
+{
+    position: relative;
+}
+
+.ander
+{
+    width: 200px;
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    background-color: black;
+    border-top: 35px solid white;
+    /* padding: 30px; */
+    padding: 25px 0 25px 30px;
+    display: none;
+    font-family: sans-serif;
+    z-index: 2;     
+
+}
+
+.ander a 
+{
+    color: gray;
+}
+
+
+.ander p:hover a
+{
+    color: white;
+}
+
+.post:hover .white 
+{
+    color: white;
+}
+
+
+.home:hover .ander,.pages:hover .ander,.vehicle:hover .ander,.blog:hover .ander,.shop:hover .ander
+{
+    display: block;
+}
+
+.blog .fa-plus,.shop .fa-plus
+{
+    padding-left: 80px;
+}
+
+.post
+{
+    position: relative;
+}
+
+.post:hover .closer
+{
+    color: gray;
+}
+
+.closer
+{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: black;
+    width: 200px;
+    padding: 25px 0 25px 30px;
+    display: none;
+}
+
+.post:hover .closer
+{
+    display: block;
+}
+
+
+.dark 
+{
+    width: 300px;
+    height: 630px;
+    position: absolute;
+    top:-100px;
+    right: 0px;
+    padding-top: 150px;
+    padding-left: 20px;
+    background-color: black;
+    color: white;
+    display: none;
+}
+
+.dark p
+{
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.fa-headphones-simple
+{
+    font-size: 30px;
+}
+
+.search
+{
+    padding: 20px 5px;
+}
+
+.bar
+{
+    position: relative;
+    padding: 20px 0px;
+}
+
+.search
+{
+    padding-left: 20px;
+}
+
+.search li 
+{
+   list-style-type: none;
+}
+
+
+
+.bar:hover .dark
+{
+    display: block;
+    position: absolute;
+    left: -200px;
+    z-index: 1;
+}
+
+.toder 
+{
+    color: #bfa37c;
+}
+
+
+.jadav
+{
+    padding: 20px 50px;
+}
+
+.over
+{
+    /* border: 2px solid red; */
+    overflow: hidden;
+    position: relative;
+}
+
+.animation img,.animation2 img 
+{
+    /* background: url(../Imagies/h3-rev-img-3.jpg); */
+    /* background-size: 100% 100%; */
+    height: 500px;
+    width: 100%;
+    animation: nilesh 5s linear infinite;
+}
+
+.animation2 img
+{
+    
+    /* background: url(../Imagies/h3-rev-img-2.jpg); */
+    /* background-size: 100% 100%; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: jaydeep 5s linear infinite;
+}
+
+.namei
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    text-align: center;
+}
+
+.namei p,h1
+{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 5px;
+}
+
+.namei h1
+{
+    font-size: 130px;
+}
+
+
+
+
+
+/* *********************navbar close*************************************** */
+
+/* ******************************requed start ********************************** */
+
+.requed
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.requed * 
+{
+    padding-top: 15px;
+}
+
+.first h1,.second h1,.rentdetail h1
+{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 3px;
+}
+
+.finest 
+{
+    color: #bfa37c;
+
+}
+
+.song
+{
+    display: grid;
+    grid-template-columns: 2fr 8fr;  
+}
+
+.so i
+{
+    font-size: 70px;
+    color: #bfa37c;
+}
+
+select
+{
+    border: none;
+    outline: none;
+}
+
+table *
+{
+    font-size: 17px;
+}
+
+td,th::after
+{
+    content: "";
+    height: 1px;
+    width: 0%;
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 1s;
+}
+
+th:hover::after,.td:hover::after
+{
+    width: 100%;
+}
+
+
+td,th 
+{
+    position: relative;
+    border-bottom: 1px solid;
+    text-align: left;
+    width: 100%;
+    font-size: 50px;
+    transition: 1s;
+}
+
+
+input
+{
+  border: none;
+  outline: none;
+}
+
+form button
+{
+    text-align: center;
+    padding: 0 30px 10px 30px ;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+
+
+
+/* ******************************requed close ********************************** */
+
+/* ********************************** zomm start ************************************** */
+
+
+.zommmain
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 80px;
+    gap: 25px;
+}
+
+
+.ambrela1,.ambrela2
+{
+    overflow: hidden;
+    margin-top: 25px;
+}
+
+.ambrela1:hover .ambrela11 img,.ambrela2:hover .ambrela22 img  
+{
+    transform: scale(1.1);
+}
+
+.ambrela11 img,.ambrela22 img
+{
+    object-fit: cover;
+    transition: 2s;
+
+}
+
+
+/* ********************************** zomm close ************************************** */
+
+
+
+/* ************************************* rental start ************************************ */
+
+
+.rental
+{
+    padding: 30px 0 30px 0 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.amet,.bhuru
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.rentdetail button
+{
+    padding: 15px 50px 15px 50px ;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+
+.bhuru
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 40px;
+    position: relative;
+}
+
+.r1,.r2
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+.round1,.round2
+{
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    position: relative;
+
+}
+
+.rounded
+{
+    border-radius: 50%;
+    height: 344px;
+    width: 344px;
+    background-color: white;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    line-height: 344px;
+    font-size: 60px;
+
+}
+
+.round1
+{
+    background: conic-gradient(#bfa37c 0deg 220deg,#bfa37c, rgb(219, 204, 204) 220deg 360deg);
+    transform: rotate(-360deg);
+}
+
+.round2
+{
+    background: conic-gradient(#bfa37c 0deg 120deg,#bfa37c, rgb(219, 204, 204) 120deg 360deg);
+}
+
+
+.namei
+{
+  font-size:40px ;
+  z-index: 1;
+}
+
+
+/* ************************************* rental close ************************************ */
+
+/* ***************************************renge start *************************************** */
+
+  .rover 
+  {
+    position: relative;
+    padding-top: 25px;
+    border-top: 2px solid gray;
+  }
+
+  .roverdetail
+  {
+    display: grid;
+    grid-template-columns: 60fr 30fr;
+    gap: 60px;
+    margin-top: 15px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: none;
+  }
+
+  .rover:hover .roverdetail
+  {
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  }
+
+  .rover:hover
+  {
+    padding-bottom: 35%;
+  }
+
+  .rover h1 i
+  {
+    float: right;
+  }
+
+  .rover:hover h1 i 
+  {
+    color: #bfa37c;
+  }
+
+  .type span i 
+  {
+    color: #bfa37c;
+    font-size: 20px;
+  }
+
+
+  .type p span 
+  {
+     font-size: 40px;
+  }
+
+  .type p sup 
+  {
+    font-size: 30px;
+  }
+
+/* ***************************************renge close *************************************** */
+
+/* ******************************************vidio start ********************************** */
+
+  .vidio 
+  {
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+  }
+
+  .vimg
+  {
+    height: 500px;
+  }
+
+
+  .nevy
+  {
+    height: 250px;
+    width: 250px;
+    border: 2px solid gray;
+    border-top: 2px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  .nevy:hover 
+  {
+    transform: rotate(-360deg) scale(1.1);
+  }
+
+  .vname
+  {
+    position: absolute;
+    top:  300px;
+    left: 120px;
+  }
+
+  .vname a 
+  {
+    text-decoration: none;
+    color: white;
+  }
+
+
+/* ******************************************vidio close ********************************** */
+
+
+
+
+/* ******************************* approach  start *************************************** */
+
+
+   .approach 
+   {
+    margin-top: 30px;
+   }
+
+   .our
+   {
+    border-top: 2px solid gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 200px;
+   }
+
+   .accessible,.orienter
+   {
+     border-left: 2px solid gray;
+     padding-left: 30px;
+   }
+
+   .accessible span,.orienter span 
+   {
+    color: #bfa37c;
+   }
+
+/* ******************************* approach close *************************************** */
+
+
+/* ******************************* approach start ***************************************  */
+
+
+ .patition3
+ {
+    padding-top: 50px;
+    padding-bottom: 50px;
+ }
+
+ .part 
+ {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 20px;
+ }
+
+ .valen,.robbin,.moreno
+ {
+    display: grid;
+    grid-template-columns: 40fr 60fr ;
+ }
+
+ .v1
+ {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+ }
+
+ .v2
+ {
+    font-size: 20px;
+    padding-top: 20px;
+ }
+
+/* ******************************* approach close ***************************************  */
+
+ /* ********************************** car start *****************************************  */
+
+   .carmain
+   {
+    padding :30px 0 30px 0 ; 
+    position: relative;
+   }
+
+
+   .car 
+   {
+    height: 600px;
+   }
+
+   .car img 
+   {
+    object-fit: cover;
+   }
+
+   .cardetail
+   {
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    color: white;
+   }
+
+   .cardetail h1
+   {
+     font-size: 40px;
+     padding: 0;
+     margin: 0;
+   }
+
+ /* ********************************** car close *****************************************  */
+
+
+ /* *********************************** asked start **************************************** */
+   
+ .asked
+ {
+    padding: 30px 0 30px 0 ;
+ }
+
+
+ .list 
+ {
+    padding-left: 400px;
+ }
+
+ .asked .line 
+ {
+    border-bottom: 2px solid gray;
+ }
+
+
+
+ .morelist
+ {
+    border-bottom: 2px solid gray;
+    position: relative;
+ }
+
+ .visiters
+ {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    display: none;
+    
+ }
+
+ .morelist:hover
+ {
+    padding-bottom: 6%;
+ }
+ 
+ .morelist i 
+ {
+    float: right;
+ }
+
+ .morelist:hover .visiters
+ {
+    display: block;
+ }
+
+
+ /* *********************************** asked close **************************************** */
+
+ /* ************************************* img part start  ************************************ */
+   
+ .imgpart4
+ {
+    padding: 30px 0 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 20px;
+ }
+
+ .dimg1
+ {
+    position: relative;
+    transition: 2s;
+ }
+
+ .lightdark 
+ {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    transition: .8s;
+
+ }
+
+ .padder 
+ {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    color: white;
+    opacity: 0;
+    transition: .8s;
+
+ }
+
+
+ .dimg1:hover .lightdark
+ {
+    opacity: 0.80;
+ }
+
+ .dimg1:hover .padder
+ {
+    opacity: 1;
+    top: 50%;
+ }
+
+ /* ************************************* img part close  ************************************ */
+  
+ 
+ /* ************************************ mecelo start *************************************** */
+
+
+
+  .mecelo
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 30px;
+    padding: 50px 0px 50px 0px;
+  }
+
+
+  .location 
+  {
+    display: grid;
+    grid-template-columns: 20fr 80fr;
+    gap: 20px;
+  }
+
+
+  .l1 i 
+  {
+    color: #bfa37c;
+    font-size: 60px;
+  }
+
+ /* ************************************ mecelo close *************************************** */
+
+
+ /* ****************************************** footer  start ******************************************** */
+
+  .foot 
+  {
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+    padding: 80px 40px 80px 40px;
+  }
+
+
+  .foot222
+  {
+    display: grid;
+    grid-template-columns: 40fr 30fr 30fr;
+    gap: 50px;
+  }
+
+  .f1 .width,.f2 p 
+  {
+    font-size: 30px;
+  }
+
+  .f2 a  
+  {
+       text-decoration: none;
+       color: black;
+  }
+
+  .f2 ul 
+  {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .f2 li 
+  {
+    list-style-type: none;
+    padding-top: 20px;
+
+  }
+
+  .f2 li:hover
+  {
+    list-style-type: disc;
+    padding-left: 10px;
+    transition: 2s;
+  }
+
+
+
+
+
+
+
+
+
+ /* ****************************************** footer  close ******************************************** */
+
+
+
+
+
+ 
+
+
+
+
+
+@keyframes jaydeep
+{
+    100%{opacity: 0; scale: 1.05;}
+}
+
+@keyframes nilesh
+{
+    100%{opacity: 1; scale: 1.05;}
+}
+
+
+
+
+
+
+
+
+

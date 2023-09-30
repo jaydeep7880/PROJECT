@@ -1,0 +1,145 @@
+@media(max-width:1015px)
+{
+    .rental,.part,.bhuru,.requed,.mecelo
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .imgpart4,.foot222
+    {
+        grid-template-columns: 1fr 1fr ;
+    }
+
+    .list,.our
+    {
+        padding: 0;
+    }
+
+    .dimg1:hover .padder
+    {
+        top: 25%;
+    }
+
+    .jadav,.search,.black
+    {
+        display: none;
+    }
+
+    .bar:hover .dark
+    {
+        display: none;
+    }
+
+    .bar 
+    {
+        text-align: right;
+    }
+
+}
+
+
+
+@media(max-width:500px)
+{
+    
+
+    .main
+    {
+        padding: 0 40px 0 40px;
+    }
+ 
+
+    .animation
+    {
+        margin-top: -100px;
+    }
+
+    .img2,.img3
+    {
+        object-fit: contain;
+    }
+
+    .requed,.zommmain,.rental,.bhuru,.roverdetail,.our,.part,.imgpart4,.mecelo,.foot222
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .rover:hover .roverdetail
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .rover:hover
+    {
+        padding-bottom: 600px;
+    }
+
+    .mint 
+    {
+        margin-top: 50px;
+    }
+
+    .vimg img,.car img
+    {
+        object-fit: cover;
+    }
+
+    .our
+    {
+        padding-left: 0px;
+    }
+
+    .valen,.robbin,.moreno
+    {
+        grid-template-columns: 40fr 60fr;
+    }
+
+    .v1
+    {
+        height: 130px;
+        width: 130px;
+    }
+
+    .v2
+    {
+        padding-top: 10px;
+    }
+
+    .car 
+    {
+        height: 450px;
+    }
+
+    .cardetail
+    {
+        padding-left: 30px;
+        bottom: 150px;
+    }
+
+    .morelist:hover
+    {
+        padding-bottom: 20%;
+    }
+
+    .visiters
+    {
+        top: 40px;
+    }
+
+    .lightdark
+    {
+        height: 603px;
+    }
+
+    .animation img,.animation2 img 
+    {
+        object-fit: cover;
+    }
+
+    .namei h1
+    {
+        font-size: 50px;
+    }
+
+
+}
