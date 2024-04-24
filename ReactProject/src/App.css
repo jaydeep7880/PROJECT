@@ -1,0 +1,426 @@
+.main 
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 2px black;
+  z-index: 1;
+}
+
+.fontfamily 
+{
+  font-family: "Bungee Inline", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-collapse .navbar-nav 
+{
+ float: right;
+}
+
+.img 
+{
+  background: url(../public/background.jpg);
+  height: 800px;
+  background-position: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 70px;
+  }
+
+#fon 
+{
+  font-size: 60px;
+}
+
+#btn 
+{
+  background-color: #AC1313;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  transition: 0.5s;
+}
+
+#btn:hover
+{
+  margin-top: -10px;
+  background-color: black;
+}
+
+.id1 
+{
+  padding: 50px 50px;
+  margin: 100px 0px;
+}
+
+.in1 
+{
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.in2 
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.gol 
+{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d7a14bdf;
+  color: white;
+  letter-spacing: 4px;
+}
+
+.glin1 
+{
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #E4B366;
+}
+
+.gol1 
+{
+  background-color: #e66f34;
+}
+
+.gol12 
+{
+  background-color: #F05B10;
+}
+
+.gol2 
+{
+  background-color: #b81d1d;
+}
+
+.gol3 
+{
+  background-color: #c42626f3;
+}
+
+.glin1 img 
+{
+  height: 100px;
+}
+
+.golder0012 
+{
+  margin: 50px 0px;
+}
+
+.in3
+{
+  display: flex;
+  justify-content:space-evenly ;
+  align-items: center;
+  gap: 30px;
+}
+
+.cunj 
+{
+  display: flex;
+  gap: 100px;
+  justify-content: space-evenly;
+}
+
+.cunjimg 
+{
+  background-color: #F5F5F5;
+  height: 240px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cunjdetail 
+{
+  text-align: start;
+}
+
+.vs 
+{
+  background: url(../public/vasesmain.jpg);
+  height: 400px;
+  background-size: cover;
+  background-position-x: right;
+  padding-top: 100px;
+  font-size: 20px;
+  color: rgb(103, 101, 101);
+  margin-bottom: 80px;
+}
+
+.sv 
+{
+  background: url(../public/productpage.jpg);
+  height: 400px;
+  background-size: cover;
+  background-position-x: right;
+  color: black;
+}
+
+.details 
+{
+  text-align: center;
+}
+
+.product 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  position: relative;
+}
+
+.imgproduct img
+{
+  transition: 0.5s;
+}
+
+.mn:hover .imgproduct img
+{
+  transform: scale(1.10);
+}
+
+.ho 
+{
+  height: 2px;
+  width: "100%";
+  background-color: gray;
+}
+
+.mn:hover .ho 
+{
+  background-color: red;
+}
+
+.imgdetailer 
+{
+  padding: 40px 0px;
+  display: flex;
+  gap: 20px;
+}
+
+.imgdetailsdiv 
+{
+  padding-top: 40px;
+}
+
+.fs i 
+{
+  font-size: 24px;
+  padding: 6px;
+  border-radius: 6px;
+  margin-right: 10px;
+  border: 1px solid gray;
+}
+
+.fs i:hover 
+{
+   border: 1px solid red;
+   cursor: pointer;
+}
+
+.related 
+{
+  padding-top: 40px;
+}
+
+.back 
+{
+  text-align: center;
+  background-color: rgba(219, 219, 219, .1);
+}
+
+.F1 
+{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 80px 0px;
+}
+
+.F1 i 
+{
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.collection1 
+{
+  padding: 80px 0px;
+}
+
+.backimg 
+{
+  background: url(../public/collection2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: 520px;
+}
+
+.v 
+{
+  background-color: orange;
+}
+
+.inp input 
+{
+  margin-bottom: 40px;
+  padding: 6px 50px;
+}
+
+.inp .btn0
+{
+  padding: 6px 50px; 
+  margin-left: 4px;
+  background-color:black;
+  color: white;
+}
+
+.artiest 
+{
+  margin: 20px 0px;
+  padding: 80px 0px;
+}
+
+.cord 
+{
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.cord01 
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+}
+
+.minimg 
+{
+  margin: 200px 0px;
+}
+
+.sh 
+{
+  background: url(../public/contact.jpg);
+  height: 450px;
+  background-size: cover;
+}
+
+.background 
+{
+  background-color: #f8f8f8;
+}
+
+.imager img
+{
+ object-fit: cover;
+ border-radius: 6px;
+}
+
+.laster 
+{
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: white;
+  margin-bottom: 100px;
+}
+
+.laster .l1,.laster .l2 
+{
+  padding: 50px 0px;
+}
+
+.tr2 input
+{
+  padding: 8px;
+}
+
+.lilinks 
+{
+  margin-top: 14px;
+}
+
+.lilinks a
+{
+  display: inline;
+}
+
+.offcanvas {
+  overflow-y: auto !important; 
+}
+
+
+@media(max-width:1000px)
+{
+  .navbar-collapse .navbar-nav 
+  {
+    float: none;
+    text-align: center;
+  }
+
+  #bn 
+  {
+    margin-left: 0px !important;
+  }
+
+  .img
+  {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .in3,.cunj,.imgdetailer,.cord01 
+  {
+    flex-wrap: wrap;
+  }
+
+  #fon 
+  {
+    font-size: 40px;
+  }
+
+  .vs,.sv
+  {
+    height: 500px;
+  }
+
+  .backimg
+  {
+    height: 650px;
+  }
+
+  .lilinks a 
+  {
+    display: block;
+  }
+}
