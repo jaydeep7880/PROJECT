@@ -1,24 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from './Navbar'
+import Navbar, { Futer } from './Navbar'
 import { useNavigate } from 'react-router-dom'
+import { data } from './data'
 
 
 function Vases() {
 
-  var [d, setd] = useState()
-
   var navpage = useNavigate()
-
-  useEffect(() => {
-    fetch("http://localhost:1001/product")
-      .then((res) => { return res.json() })
-      .then((data) => {
-        setd(data)
-      })
-  }, [])
 
   var hendelpage = (k) => {
     navpage('/vases/' + k)
+    window.scrollTo(0,0)
   }
 
   return (
@@ -28,7 +20,7 @@ function Vases() {
         <div className='vs'>
           <div className='container'>
             <h1>Vases</h1>
-            <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable. Like 'Sumi' ink painting, it does not lend itself to erasures and indecision.</p>
+            <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable.</p>
           </div>
         </div>
 
@@ -42,8 +34,8 @@ function Vases() {
 
           <div className='product'>
 
-            {d &&
-              d.map((s,b) => (
+            {data[0].product &&
+              data[0].product.map((s,b) => (
                 <div className='mn' key={b}>
                   <div style={{ overflow: "hidden" }}>
                     <div className='imgproduct'>
@@ -65,6 +57,16 @@ function Vases() {
           </div>
 
         </div>
+
+        <br />
+
+                <Futer></Futer>
+
+                <center>
+                    <div style={{ padding: "30px", backgroundColor: "#ebebeb" }}>
+                        Template design by Dorian Hoxha - View all templatesPowered by Webflow
+                    </div>
+                </center>
 
       </div>
       

@@ -6,21 +6,24 @@ import AliceCarousel from 'react-alice-carousel';
 import Login from './Login';
 import { contect } from './App';
 import Bhuro from './Bhuro';
+import { data } from './data';
+import { Bounce, Flip, ToastContainer, Zoom, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Navbar() {
 
-    var {log,setlog,out,setout} = useContext(contect)
+    var { log, setlog, out, setout } = useContext(contect)
 
-    var loginpage = ()=>{  
+    var loginpage = () => {
         setlog("")
         alert("are you sure...!")
         setout(false)
-     }
+    }
 
     return (
         <div className='main'>
-            
+
             <div className='container'>
                 <div>
                     <nav className="navbar navbar-expand-lg navbar-light">
@@ -45,25 +48,25 @@ function Navbar() {
                                     </li>
                                     <li className="nav-item">
                                         {
-                                           out ?
-                                           (
-                                            <Link className="nav-link" onClick={loginpage}>LOG out</Link>
-                                           ) : (
-                                            <div className='lilinks'>
-                                            <Link to={'/Registration'} className="nav-link">REGISTRATION</Link>
-                                            <Link to={'/Login'} className="nav-link">LOG IN</Link>
-                                            </div>
-                                           )
+                                            out ?
+                                                (
+                                                    <Link className="nav-link" onClick={loginpage}>LOG out</Link>
+                                                ) : (
+                                                    <div className='lilinks'>
+                                                        <Link to={'/Registration'} className="nav-link">REGISTRATION</Link>
+                                                        <Link to={'/Login'} className="nav-link">LOG IN</Link>
+                                                    </div>
+                                                )
                                         }
                                     </li>
                                     <li className="nav-item">
                                         <Link className="nav-link">{log}</Link>
                                     </li>
 
-                                    <Bhuro/>
+                                    <Bhuro />
                                 </ul>
 
-                            
+
                             </div>
 
                         </div>
@@ -76,17 +79,16 @@ function Navbar() {
     )
 }
 
-
 export function Moredata() {
     return (
         <div>
 
             <div className='img container-fluid'>
 
-                <div style={{ width: 450 }}>
-                    <h5 style={{ color: "red", marginTop:"30px",}}>POMPEO POTTERY</h5>
+                <div>
+                    <h5 style={{ color: "red", marginTop: "30px", }}>POMPEO POTTERY</h5>
 
-                    <h1 id='fon'>Unique Porcelain <span style={{ color: "red" }}>&</span> Stone Collection</h1>
+                    <h1 id='fon'>Unique Porcelain <br /> <span style={{ color: "red" }}>&</span> Stone Collection</h1>
 
                     <p>Unique & modern pottery made by our master in porcelain & stones</p>
 
@@ -112,24 +114,26 @@ export function Fielddata() {
 
     var vases = () => {
         vasespage("/vases")
-        // console.log("jadav")
+        window.scrollTo(0, 0)
     }
 
     var mugpage = useNavigate()
 
     var mug = () => {
         mugpage("/mugs")
+        window.scrollTo(0, 0)
     }
 
     var platepage = useNavigate()
 
     var plates = () => {
         platepage("/plates")
+        window.scrollTo(0, 0)
     }
     return (
         <div>
 
-            <div className='id1'>
+            <div className='id1 container'>
 
                 <div className='id2'>
 
@@ -289,20 +293,11 @@ export function Gold() {
 
 export function Collection1() {
 
-    var [d, setd] = useState()
-
     var navpage = useNavigate()
-
-    useEffect(() => {
-        fetch("http://localhost:1001/collection")
-            .then((res) => { return res.json() })
-            .then((data) => {
-                setd(data)
-            })
-    }, [])
 
     var hendelcolle = (k) => {
         navpage('/product/' + k)
+        window.scrollTo(0, 0)
     }
 
     return (
@@ -315,13 +310,13 @@ export function Collection1() {
 
                         <h5 style={{ color: "red" }}>OUR ONLINE STORE</h5>
                         <h1>Product Collection</h1>
-                        <br/><br/>
+                        <br /><br />
                     </div>
 
                     <div className='product'>
 
-                        {d &&
-                            d.map((s) => (
+                        {data[4].collection &&
+                            data[4].collection.map((s) => (
                                 <div className='mn' key={s.name}>
                                     <div style={{ overflow: "hidden" }}>
                                         <div className='imgproduct'>
@@ -362,7 +357,7 @@ export function Shopping0() {
             <div className='vs sv backimg'>
                 <div className='container'>
                     <h1>Product Page</h1>
-                    <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable. Like 'Sumi' ink painting, it does not lend itself to erasures and indecision.</p>
+                    <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable.</p>
                     <br />
                     <button id='btn'>NEW COLLECTION</button>
                 </div>
@@ -374,18 +369,36 @@ export function Shopping0() {
 export function Letest() {
     var [i, seti] = useState("")
 
-    var added = ()=>{
+    var added = () => {
 
         var inp = document.getElementById("inpdata")
 
-        if(inp.value == "" || inp.value.length <= 1)
-        {
-            alert("pleas enter a value and mini-mum 2 letter's")
+        if (inp.value == "" || inp.value.length <= 1) {
+            toast.error('pleas enter a value and mini-mum 2 letter', {
+                position: "top-center",
+                autoClose: 2500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Flip,
+                });
         }
 
-        else 
-        {
-            alert("thank you for subscribe...!")
+        else {
+            toast.success('Thank you'+ " " + inp.value, {
+                position: "top-center",
+                autoClose: 2500,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Flip,
+                });
             inp.value = ""
         }
 
@@ -400,13 +413,13 @@ export function Letest() {
                 <h1 style={{ fontSize: "50px" }}>Latest news & New updates</h1><br /><br />
 
                 <div className='inp'>
-                    <input type="text" name="" id='inpdata' value={i} onChange={(s) => { seti(s.target.value) }} />
-                    <input className='btn0' type="button" name="" value="SUBSCRIBE" onClick={added}/>
+                    <input type="text" name="" id='inpdata' value={i} onChange={(s) => { seti(s.target.value) }} placeholder='Enter a name..'/>
+                    <input className='btn0' type="button" name="" value="SUBSCRIBE" onClick={added} />
                     <br /><br />
                     <input type="checkbox" name="" value="" />
                     <span style={{ marginLeft: "10px" }}>Sign up for our newsletter</span>
                 </div>
-
+                <ToastContainer></ToastContainer>
             </center>
         </>
     )
@@ -446,7 +459,7 @@ export function Futer() {
                 </div>
             </div>
             <center>
-                <div style={{ padding: "30px", backgroundColor: "#ebebeb" }}>
+                <div style={{ padding: "30px", marginBottom: "60px", backgroundColor: "#ebebeb" }}>
                     Template design by Dorian Hoxha - View all templatesPowered by Webflow
                 </div>
             </center>
@@ -454,13 +467,25 @@ export function Futer() {
     )
 }
 
-export function Add(){
-    var ravi = ()=>{
-        alert("you can buy this item only for shop menu..")
+export function Add() {
+    var ravi = () => {
+        // alert("you can buy this item only for shop menu..")
+        toast.warn('you can buy this item only for shop menu..!', {
+            position: "top-center",
+            autoClose: 2500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Zoom,
+            });
     }
-    return(
+    return (
         <>
-        <button className='btn btn-primary' onClick={ravi}>Add To Cart</button>
+            <button className='btn btn-primary' onClick={ravi}>Add To Cart</button>
+            <ToastContainer></ToastContainer>
         </>
     )
 }

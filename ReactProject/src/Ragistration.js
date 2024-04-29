@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { Bounce, Flip, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Ragistration() {
   var [name, setname] = useState("")
@@ -7,6 +9,7 @@ function Ragistration() {
   var [email, setemail] = useState("")
   var homer = useNavigate("")
 
+  var ragister = JSON.parse(localStorage.getItem("dataragistration")) ?? []
 
   var hendelregistration = () => {
     var arr = { name: name, pass: pass, email: email }
@@ -15,47 +18,78 @@ function Ragistration() {
     var p2 = document.getElementById("form3Example4cd")
 
     if (name.length <= 1) {
-      alert("Pleas enter a valid name...")
+      toast.error('Pleas enter a valid name...!', {
+        position: "top-center",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Flip,
+        });
+        
     }
 
     else if (pass.length <= 1) {
-      alert("Enter a password and mini-mum 5 number...")
+      toast.error('Enter a password and mini-mum 5 number...!', {
+        position: "top-center",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Flip,
+        });
+        
     }
 
-    else if(p1.value !== p2.value)
-    {
-      alert("password are doesn't match...")
+    else if (p1.value !== p2.value) {
+      toast.error('password are doesnt match...!', {
+        position: "top-center",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Flip,
+        });
+        
     }
 
     else {
 
-      fetch("http://localhost:400/arr")
-      .then((res)=>{return res.json()})
-      .then((data)=>{
-       var nil = data.find((s)=>{
-          return email == s.email
-        })
-        if(nil)
-        {
-          alert("this email is alredy exix....")
-        }
-  
-        else 
-        {
-          fetch("http://localhost:400/arr", {
-            method: "post",
-            headers: { "content-type": "application/json" },
-            body: JSON.stringify(arr)
-          })
-            .then((res) => {
-              if (res) {
-                alert("Registration is complete...")
-                homer('/')
-              }
-            })
-        }
+      var emailmatch = ragister.find((a) => {
+        return a.email == email
       })
-     
+      if (emailmatch) {
+        toast.error('This data is alredy exis...!', {
+          position: "top-center",
+          autoClose: 2500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          transition: Flip,
+          });
+      }
+      else {
+        ragister.push(arr)
+        alert("Ragistration is Complete")
+        homer('/')
+        localStorage.setItem("dataragistration", JSON.stringify(ragister))
+      }
+      console.log(ragister)  
+
+      // this code is new to localStorage registration 
+
     }
   }
 
@@ -108,8 +142,8 @@ function Ragistration() {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-key fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input type="password" id="form3Example4cd" className="form-control" 
-                            placeholder='repeat your password...'/>
+                            <input type="password" id="form3Example4cd" className="form-control"
+                              placeholder='repeat your password...' />
                             <label className="form-label" for="form3Example4cd">Repeat your password</label>
                           </div>
                         </div>
@@ -135,6 +169,7 @@ function Ragistration() {
           </div>
         </div>
       </section>
+      <ToastContainer></ToastContainer>
     </div>
   )
 }

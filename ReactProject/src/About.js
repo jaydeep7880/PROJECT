@@ -8,7 +8,7 @@ function About() {
       <div className='vs'>
         <div className='container'>
           <h1>About Us</h1>
-          <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable. Like 'Sumi' ink painting, it does not lend itself to erasures and indecision.</p>
+          <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable.</p>
         </div>
       </div>
       <Fielddata></Fielddata>
@@ -80,7 +80,7 @@ function About() {
 
         <div style={{ paddingTop: "150px" }}>
 
-          <div className='cunj' style={{ paddingBottom: "180px" }}>
+          <div className='cunj' style={{ paddingBottom: "130px" }}>
 
             <div className='cunjimg'>
               <img src="background1.jpg" alt="" height={400} />

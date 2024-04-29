@@ -24,9 +24,10 @@
 .img 
 {
   background: url(../public/background.jpg);
-  height: 800px;
+  padding: 60px 0px;
   background-position: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin-top: 70px;
@@ -70,6 +71,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 .gol 
@@ -219,6 +221,7 @@
 {
   padding: 40px 0px;
   display: flex;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -258,6 +261,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 20px;
   flex-wrap: wrap;
   padding: 80px 0px;
 }
@@ -377,6 +381,19 @@
 
 .offcanvas {
   overflow-y: auto !important; 
+}
+
+.di 
+{
+  display: flex;
+}
+
+@media(max-width:500px)
+{
+  .firstimgdiv img 
+  {
+    width: 100%;
+  }
 }
 
 

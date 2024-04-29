@@ -1,24 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import { Link, useNavigate } from 'react-router-dom'
-
+import { data } from './data'
 
 function Mug() {
 
-    var [d, setd] = useState()
-
     var navpage = useNavigate()
-
-    useEffect(() => {
-        fetch("http://localhost:1001/mugs")
-            .then((res) => { return res.json() })
-            .then((data) => {
-                setd(data)
-            })
-    }, [])
 
     var hendelmug = (k) => {
         navpage('/mug/' + k)
+        window.scrollTo(0,0)
     }
 
     function Futer() {
@@ -66,7 +57,7 @@ function Mug() {
                 <div className='vs'>
                     <div className='container'>
                         <h1>Mugs</h1>
-                        <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable. Like 'Sumi' ink painting, it does not lend itself to erasures and indecision.</p>
+                        <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable.</p>
                     </div>
                 </div>
 
@@ -78,10 +69,12 @@ function Mug() {
                         <h1>Product Collection</h1>
                     </div>
 
+                    {/* window.scrollto(0,0) */}
+
                     <div className='product'>
 
-                        {d &&
-                            d.map((s) => (
+                        {data[2].mugs &&
+                            data[2].mugs.map((s) => (
                                 <div className='mn' key={s.name}>
                                     <div style={{ overflow: "hidden" }}>
                                         <div className='imgproduct'>

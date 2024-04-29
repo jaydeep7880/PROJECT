@@ -2,28 +2,21 @@ import React, { useEffect, useState } from 'react'
 import Navbar, { Add } from './Navbar'
 import { Link, useParams } from 'react-router-dom'
 import Canva from './Canva'
+import { data } from './data'
+
 
 function VasesPage() {
+
     var { id } = useParams()
-    var [url1, seturl1] = useState("")
+
+    let url1 = data[0].product.find((v)=>{
+        return v.id == id
+
+    })
+
     var [t, sett] = useState("")
     var [num, setnum] = useState("1")
 
-    useEffect(() => {
-        fetch("http://localhost:1001/product/" + id)
-            .then((res) => { return res.json() })
-            .then((data) => {
-                seturl1(data)
-            })
-    }, [])
-
-    useEffect(() => {
-        fetch("http://localhost:1001/related/")
-            .then((res) => { return res.json() })
-            .then((data) => {
-                sett(data)
-            })
-    }, [])
 
     return (
         <div>
@@ -33,14 +26,14 @@ function VasesPage() {
                 <div className='vs sv'>
                     <div className='container'>
                         <h1>Product Page</h1>
-                        <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable. Like 'Sumi' ink painting, it does not lend itself to erasures and indecision.</p>
+                        <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable.</p>
                     </div>
                 </div>
 
                 <div className='container imgdetailer'>
 
                     <div className='firstimgdiv'>
-                        <img src={url1.url} alt="" height={550} width={450} />
+                        <img src={url1.url} alt="" height={550}/>
                     </div>
 
                     <div className='imgdetailsdiv'>
@@ -77,7 +70,7 @@ function VasesPage() {
                         <br></br>
 
                         <h4>Quantity : </h4>
-                        <input type="number" name="" value={num} onChange={(e) => { setnum(e.target.value) }} style={{ width: "10%" }} />
+                        <input type="number" name="" value={num} min={1} onChange={(e) => { setnum(e.target.value) }} style={{ width: "10%" }} />
                         <br /><br />
                         
                         <Add></Add>
@@ -92,8 +85,8 @@ function VasesPage() {
 
                     <div className='product'>
 
-                        {t &&
-                            t.map((s) => (
+                        {data[1].related &&
+                            data[1].related.map((s) => (
                                 <div className='mn' key={s.id}>
                                     <div style={{ overflow: "hidden" }}>
                                         <div className='imgproduct'>

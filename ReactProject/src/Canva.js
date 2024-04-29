@@ -1,78 +1,69 @@
-import { retry } from '@reduxjs/toolkit/query'
 import React, { useEffect, useState } from 'react'
 import { json, useParams } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { data } from './data';
+import { Flip} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Canva({ number }) {
+
+    // is number ke andar incriment wale input ki value aa rahi he 
+
     var { id } = useParams()
-    var [t, sett] = useState("")
-    var [d, setd] = useState("")
 
-    var t = { id: t.id, name: t.name, url: t.url, price: t.price * number }
+    var Addcart = JSON.parse(localStorage.getItem("jadav3")) ?? [] 
 
-    useEffect(() => {
-        fetch("http://localhost:1001/shop")
-            .then((res) => { return res.json() })
-            .then((data) => {
-                var r = data.filter((s) => {
-                    return s.id == id
-                })
+    var click2 = () => {
 
-                sett(r[0])
-                // console.log(r)
-            })
-    }, [])
-
-    var click2 = (e) => {
-
-        fetch("http://localhost:1001/canvas")
-            .then((res) => { return res.json() })
-            .then((data) => {
-                var ravi = data.find((s) => {
-                    return s.id == t.id
-                })
-                if (ravi) {
-                    return alert("This item is alredy exix")
-                }
-                else {
-                    fetch("http://localhost:1001/canvas", {
-                        method: "post",
-                        headers: { "content-type": "application/json" },
-                        body: JSON.stringify(t)
-                    })
-                    e.preventDefault()
-                }
-            })
-
-    }
-
-    useEffect(() => {
-        fetch("http://localhost:1001/canvas")
-            .then((res) => { return res.json() })
-            .then((data) => {
-                setd(data)
-            })
-    }, [])
-
-    var remove = (g) => {
-        fetch("http://localhost:1001/canvas/" + g, {
-            method: "delete",
-            headers: { "content-type": "application/josn" },
+        var alldata = data[5].shop.find((s)=>{
+                return s.id == id
         })
-            .then((res) => {
-                if (res) {
-                    alert("Deleted...")
-                    window.location.reload()
-                    // window.scrollTo(0,0)
-                }
-            })
+
+        alldata = {id:alldata.id,url:alldata.url,name:alldata.name,price: alldata.price * number}
+        
+        // console.log(alldata.price * number)
+
+       let chkdata =  Addcart.find((v)=>{
+            return v.id == id
+
+        })
+
+        if(chkdata)
+        {
+        return toast.info('This items is alrady exits....!', {
+            position: "top-center",
+            autoClose: 2500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Flip,
+            });
+        }
+        else
+        {
+            Addcart.push(alldata)
+            localStorage.setItem("jadav3",JSON.stringify(Addcart))
+        }
     }
 
     var alert0 = () => {
-        alert("working in progress...")
+        toast.info('Working In Progress...!', {
+            position: "top-center",
+            autoClose: 2497,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Flip,
+            });
     }
-
+ 
     return (
         <div>
             <button id='bn' style={{ marginTop: "11px", marginLeft: "20px", borderRadius: "6px" }} data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" onClick={click2}>
@@ -86,11 +77,11 @@ function Canva({ number }) {
                 </div>
                 <div className="offcanvas-body">
                     <div>
-
                         {
-                            d &&
-                            d.map((p) => (
+                            Addcart &&
+                            Addcart.map((p) => (
                                 <div key={p.id}>
+
                                     <div style={{ display: "flex", paddingBottom: "10px" }}>
                                         <div>
                                             <img src={p.url} alt="" height={100} width={100} />
@@ -98,7 +89,7 @@ function Canva({ number }) {
                                         <div style={{ paddingTop: "2px", paddingLeft: "40px" }}>
                                             <p>{p.name}</p>
                                             <p>{p.price}</p>
-                                            <button className='btn btn-danger' onClick={() => { remove(p.id) }}>Remove1010</button>
+                                            <button className='btn btn-danger'>Remove</button>
                                             <button className='btn btn-primary ms-5' onClick={alert0}>Buy Now</button>
                                         </div>
                                     </div>
@@ -110,6 +101,7 @@ function Canva({ number }) {
 
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </div>
     )
 }

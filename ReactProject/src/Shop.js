@@ -1,23 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import Navbar, { Letest } from './Navbar'
 import { useNavigate } from 'react-router-dom'
-
+import { data } from './data'
 function Shop() {
-  var [d, setd] = useState()
   var [i, seti] = useState("")
 
   var navpage = useNavigate()
 
-  useEffect(() => {
-    fetch("http://localhost:1001/shop")
-      .then((res) => { return res.json() })
-      .then((data) => {
-        setd(data)
-      })
-  }, [])
-
   var hendelshop = (k) => {
     navpage('/shops/' + k)
+    window.scrollTo(0,0)
   }
   return (
     <div style={{marginTop:"80px"}}>
@@ -25,7 +17,7 @@ function Shop() {
       <div className='vs sv'>
         <div className='container'>
           <h1>Shop</h1>
-          <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable. Like 'Sumi' ink painting, it does not lend itself to erasures and indecision.</p>
+          <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable.</p>
         </div>
       </div>
 
@@ -39,8 +31,8 @@ function Shop() {
 
         <div className='product'>
 
-          {d &&
-            d.map((s) => (
+          {data[5].shop &&
+            data[5].shop.map((s) => (
               <div className='mn' key={s.name}>
                 <div style={{ overflow: "hidden" }}>
                   <div className='imgproduct'>

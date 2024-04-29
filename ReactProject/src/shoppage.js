@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import { Link, useParams } from 'react-router-dom'
 import Canva from './Canva'
+import { data } from './data'
 
 function Shoppage() {
     var { id } = useParams()
@@ -9,21 +10,9 @@ function Shoppage() {
     var [t, sett] = useState("")
     var [num, setnum] = useState("1")
 
-    useEffect(() => {
-        fetch("http://localhost:1001/shop/" + id)
-            .then((res) => { return res.json() })
-            .then((data) => {
-                seturl1(data)
-            })
-    }, [])
-
-    useEffect(() => {
-        fetch("http://localhost:1001/related/")
-            .then((res) => { return res.json() })
-            .then((data) => {
-                sett(data)
-            })
-    }, [])
+    var url1 = data[5].shop.find((s)=>{
+        return s.id == id 
+    })
 
     return (
         <div>
@@ -33,14 +22,14 @@ function Shoppage() {
                 <div className='vs sv'>
                     <div className='container'>
                         <h1>Shop</h1>
-                        <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable. Like 'Sumi' ink painting, it does not lend itself to erasures and indecision.</p>
+                        <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable.</p>
                     </div>
                 </div>
 
                 <div className='container imgdetailer'>
 
                     <div className='firstimgdiv'>
-                        <img src={url1.url} alt="" height={550} width={450} />
+                        <img src={url1.url} alt="" height={550}/>
                     </div>
 
                     <div className='imgdetailsdiv'>
@@ -77,7 +66,7 @@ function Shoppage() {
                         <br></br>
 
                         <h4>Quantity : </h4>
-                        <input type="number" name="" value={num} onChange={(e) => { setnum(e.target.value) }} style={{ width: "10%" }} />
+                        <input type="number" name="" value={num} min={1} onChange={(e) => { setnum(e.target.value) }} style={{ width: "10%" }} />
                         <br /><br />
                         <Canva number={num}></Canva>
                     </div>
@@ -90,8 +79,8 @@ function Shoppage() {
 
                     <div className='product'>
 
-                        {t &&
-                            t.map((s) => (
+                        {data[1].related &&
+                            data[1].related.map((s) => (
                                 <div className='mn' key={s.name}>
                                     <div style={{ overflow: "hidden" }}>
                                         <div className='imgproduct'>

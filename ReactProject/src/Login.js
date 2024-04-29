@@ -2,38 +2,46 @@ import React, { useContext, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar, { Revi } from './Navbar'
 import { contect } from './App'
-
+import { Bounce, Flip, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login() {
   var [email, setemail] = useState("")
   var [pass, setpass] = useState("")
   var homer = useNavigate("")
-  // var [m, setm] = useState("")
-  var {log,setlog,out,setout} = useContext(contect)
+
+  var { log, setlog, out, setout } = useContext(contect)
+
+  var ragister = JSON.parse(localStorage.getItem("dataragistration")) ?? []
 
   var login = () => {
 
-    fetch("http://localhost:400/arr")
-      .then((res) => { return res.json() })
-      .then((data) => {
+    var matchdata = ragister.find((s) => {
+      return s.email == email && s.pass == pass
+    })
 
-        var s = data.find((s) => {
-          return s.email == email && s.pass == pass
-        })
+    // console.log(matchdata)
 
-        if (s) {
-          // alert("Welcome..." + s.name)
-          // setm(s.name)
-          setlog(s.name)
-          setout(true)
-          homer('/')
-        }
+    if (matchdata) {
+      setlog(matchdata.name)
+      alert("Welcome" + " " + matchdata.name)
+      setout(true)
+      homer('/')
+    }
+    else {
+      toast.error('Envalid email OR Password..!', {
+        position: "top-center",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Flip,
+        });
+    }
 
-        else {
-          alert("Envalid email OR Password..!")
-        }
-
-      })
   }
 
   return (
@@ -87,6 +95,7 @@ function Login() {
           </div>
         </div>
       </div>
+      <ToastContainer></ToastContainer>
     </section>
 
   )

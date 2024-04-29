@@ -1,24 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import { Link, useNavigate } from 'react-router-dom'
-
+import { data } from './data'
 
 function Plates() {
 
-    var [d, setd] = useState()
 
     var navpage = useNavigate()
 
-    useEffect(() => {
-        fetch("http://localhost:1001/plates")
-            .then((res) => { return res.json() })
-            .then((data) => {
-                setd(data)
-            })
-    }, [])
-
     var hendelplates = (k) => {
         navpage('/plate/' + k)
+        window.scrollTo(0,0)
     }
 
     function Futer() {
@@ -66,7 +58,7 @@ function Plates() {
                 <div className='vs'>
                     <div className='container'>
                         <h1>Plates</h1>
-                        <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable. Like 'Sumi' ink painting, it does not lend itself to erasures and indecision.</p>
+                        <p className='w-75'>The attractions of ceramics lie partly in its contradictions. It is both difficult and easy, with an element beyond our control. It is both extremely fragile and durable.</p>
                     </div>
                 </div>
 
@@ -80,8 +72,8 @@ function Plates() {
 
                     <div className='product'>
 
-                        {d &&
-                            d.map((s) => (
+                        {data[3].plates &&
+                            data[3].plates.map((s) => (
                                 <div className='mn' key={s.name}>
                                     <div style={{ overflow: "hidden" }}>
                                         <div className='imgproduct'>
